@@ -1,6 +1,9 @@
 :root {
   --background-color: white !important;
   --text-color: black !important;
+
+  --main-bg-color: #04284b;
+  --highlight-color: #dd4b23;
 }
 html {
   scroll-behavior: smooth;
@@ -81,11 +84,11 @@ body {
 }
 
 .header-nav > ul > li > a.active {
-  color: #dd4b23;
+  color: var(--highlight-color);
 }
 
 .heading {
-  background-color: #04284b;
+  background-color: var(--main-bg-color);
   padding-top: 15%;
   position: relative;
   margin-bottom: -5px;
@@ -123,7 +126,7 @@ body {
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 2px;
-  background-color: #04284b;
+  background-color: var(--main-bg-color);
   width: fit-content;
 }
 
@@ -133,7 +136,7 @@ body {
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 2px;
-  background-color: #dd4b23;
+  background-color: var(--highlight-color);
   width: fit-content;
 }
 
@@ -156,12 +159,12 @@ body {
   font-family: "Moderustic", sans-serif;
   font-weight: 800;
   position: absolute;
-  top: 84%;
+  top: 98%;
   left: 10%;
   z-index: 600;
   font-size: 72px;
   line-height: 1;
-  color: #dd4b23;
+  color: var(--highlight-color);
   text-transform: uppercase;
 }
 
@@ -169,13 +172,13 @@ body {
   font-family: "Moderustic", sans-serif;
   font-weight: 800;
   position: absolute;
-  top: 100%;
+  top: 114%;
   left: 10%;
   z-index: 600;
   font-size: 72px;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 2px #dd4b23;
+  -webkit-text-stroke: 2px var(--highlight-color);
   text-transform: uppercase;
 }
 
@@ -185,7 +188,7 @@ body {
   right: 30%;
   height: 140%;
   width: 70%;
-  background-image: url(./img/2151468830.jpg);
+  background-image: url(./img/img-11.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -194,11 +197,11 @@ body {
 
 .mission-content-img-2 {
   position: absolute;
-  top: 5%;
-  right: 15%;
+  top: 15%;
+  right: 0;
   height: 140%;
   width: 70%;
-  background-image: url(./img/logistics-means-transport-together-with-technological-futuristic-holograms.jpg);
+  background-image: url(./img/img-12.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -229,12 +232,12 @@ body {
 }
 
 .section-svg-2 {
-  background-color: #04284b;
+  background-color: var(--main-bg-color);
   height: 300px;
 }
 
 .service-content {
-  background-color: #04284b;
+  background-color: var(--main-bg-color);
   margin-top: -5px;
 }
 
@@ -288,7 +291,7 @@ body {
 
 .cards-content {
   position: relative;
-  background-color: #04284b;
+  background-color: var(--main-bg-color);
   margin-bottom: -5px;
   padding: 40px 0;
 }
@@ -333,7 +336,7 @@ body {
   background-repeat: no-repeat;
 }
 .card-fourth {
-  background-image: url(./img/truck-logistics-operation-dusk-2.jpg);
+  background-image: url(./img/vehicle-move.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -432,7 +435,11 @@ body {
 
 .control-card-block-text {
   padding: 25px 25px 25px 40px;
-  background: linear-gradient(to right, #dd4b23 100%, transparent 0%);
+  background: linear-gradient(
+    to right,
+    var(--highlight-color) 100%,
+    transparent 0%
+  );
   background-position: left;
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -511,14 +518,14 @@ body {
   left: 0;
   width: 50%;
   height: 10px;
-  background-color: #dd4b23;
+  background-color: var(--highlight-color);
   border-radius: 20px;
 }
 
 .choose-content-container p {
   position: relative;
   font-family: "Tenor Sans", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 40px;
   color: black;
   margin: 0 auto;
@@ -529,7 +536,7 @@ body {
 }
 
 .safety-content {
-  background-color: #01294c;
+  background-color: var(--main-bg-color);
   padding: 130px 0;
   margin-bottom: -5px;
 }
@@ -554,7 +561,7 @@ body {
   z-index: 600;
   font-size: 72px;
   line-height: 1;
-  color: #dd4b23;
+  color: var(--highlight-color);
   text-transform: uppercase;
 }
 
@@ -568,7 +575,7 @@ body {
   font-size: 72px;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 2px #dd4b23;
+  -webkit-text-stroke: 2px var(--highlight-color);
   text-transform: uppercase;
 }
 
@@ -588,7 +595,7 @@ body {
 .safety-content-img-2 {
   position: absolute;
   top: 150px;
-  right: 250px;
+  right: 300px;
   height: 600px;
   width: 400px;
   background-image: url(./img/scene-with-photorealistic-logistics-operations-proceedings.jpg);
@@ -630,7 +637,7 @@ body {
 .footer {
   background: white;
   color: black;
-  padding-top: 300px;
+  padding-top: 200px;
 }
 
 .footer-inner-block {
@@ -644,6 +651,18 @@ body {
 
 .footer-inner-text {
   width: 40%;
+  padding-left: 20px;
+}
+
+.footer-inner-text div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.footer-inner-text i {
+  color: var(--highlight-color);
+  font-size: 20px;
 }
 
 .footer-inner-img img {
@@ -704,12 +723,41 @@ body {
 
 .footer-info {
   padding: 100px 0 50px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 18px;
 }
+
 .footer-info span {
   font-family: "Tenor Sans", sans-serif;
-  font-size: 18px;
   color: black;
   padding-bottom: 20px;
+}
+
+.footer-info a {
+  text-decoration: none;
+  color: #229ed9;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-info div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-info img {
+  width: 100px;
+}
+
+.footer-info img:hover {
+  border-bottom: 2px solid #5fb7cf;
+  padding-bottom: 2px;
 }
 
 .footer-follow-block {
@@ -853,6 +901,9 @@ body {
   .card-container {
     padding: 0 15%;
   }
+  .card {
+    height: 450px;
+  }
 
   .control-cards-content-container {
     width: 100%;
@@ -882,7 +933,7 @@ body {
   .safety-content-text {
     padding-left: 5%;
   }
-  .safety-content-img p{
+  .safety-content-img p {
     top: 92%;
     right: 0;
     font-size: 66px;
@@ -982,10 +1033,12 @@ body {
   }
 
   .card-container {
-    padding: 0 10%;
+    width: 90%;
+    justify-content: center;
   }
   .card {
-    width: 23%;
+    width: 35%;
+    height: 400px;
   }
   .card p {
     font-size: 22px;
@@ -1000,7 +1053,7 @@ body {
   .control-card-block-h5 h3 {
     font-size: 40px;
   }
-  .control-card-block-left, 
+  .control-card-block-left,
   .control-card-block-right {
     width: 100%;
     padding: 0 5%;
@@ -1062,10 +1115,12 @@ body {
   }
   .footer-inner-text {
     width: 100%;
-    
   }
   .footer p {
     font-size: 18px;
+  }
+  .footer-info {
+    justify-content: center;
   }
 }
 
@@ -1130,7 +1185,7 @@ body {
   }
 
   .mission-content-container {
-    padding-top: 120px;
+    padding-top: 150px;
     flex-direction: column;
     height: 800px;
   }
@@ -1203,7 +1258,7 @@ body {
   .control-cards-content-container p {
     font-size: 15px;
   }
-  .control-card-block-left, 
+  .control-card-block-left,
   .control-card-block-right {
     width: 100%;
     padding: 0 5%;
@@ -1269,7 +1324,7 @@ body {
     width: 100%;
   }
   .footer-inner-text {
-    width: 100%; 
+    width: 100%;
   }
   .footer p {
     font-size: 15px;
@@ -1286,13 +1341,19 @@ body {
     height: 40px;
   }
   .footer-follow-block ul li span {
-    font-size: 20px!important;
+    font-size: 20px !important;
   }
-
   .footer-info span {
     font-size: 16px;
   }
-
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+  }
+  .footer-info img {
+    width: 80px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -1437,7 +1498,7 @@ body {
   .control-cards-content-container p {
     font-size: 14px;
   }
-  .control-card-block-left, 
+  .control-card-block-left,
   .control-card-block-right {
     width: 100%;
     padding: 0 5%;
@@ -1475,12 +1536,12 @@ body {
   .safety-content-img p {
     top: 60%;
     left: 25%;
-    font-size: 46px;
+    font-size: 32px;
   }
   .safety-content-img span {
     top: 69%;
     left: 25%;
-    font-size: 46px;
+    font-size: 32px;
   }
   .safety-content-text {
     width: 100%;
@@ -1506,7 +1567,7 @@ body {
     width: 100%;
   }
   .footer-inner-text {
-    width: 100%; 
+    width: 100%;
   }
   .footer p {
     font-size: 15px;
@@ -1523,9 +1584,17 @@ body {
     height: 20px;
   }
   .footer-follow-block ul li span {
-    font-size: 10px!important;
+    font-size: 10px !important;
   }
   .footer-info span {
     font-size: 14px;
+  }
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+  .footer-info img {
+    width: 70px;
   }
 }
